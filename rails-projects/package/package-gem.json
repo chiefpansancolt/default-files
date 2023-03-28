@@ -1,0 +1,61 @@
+{
+	"name": "name here",
+	"version": "0.0.0",
+	"description": "description here",
+	"scripts": {
+		"build": "npm-run-all build:*",
+		"build:css": "npx tailwindcss -i dist/app.css -o public/application.css --minify",
+		"build:js": "esbuild --bundle dist/app.js --outfile=public/application.js --minify",
+		"test:start": "bundle exec rake test",
+		"test:open": "open coverage/index.html",
+		"test": "npm-run-all test:*",
+		"lint:markdown": "markdownlint CHANGELOG.md .github/CODE_OF_CONDUCT.md .github/CONTRIBUTING.md README.md .github/PULL_REQUEST_TEMPLATE.md -c .markdownlint.yml",
+		"lint:ruby": "rubocop",
+		"lint:erb": "bundle exec erblint --lint-all",
+		"lint:javascript": "eslint dist",
+		"gem:build": "gem build <PROJECT-NAME>.gemspec",
+		"format": "prettier './**/*.{css,js,json,yml,md,erb}' -l",
+		"format:check": "prettier './**/*.{css,js,json,yml,md,erb}' -c",
+		"format:fix": "prettier './**/*.{css,js,json,yml,md,erb}' -w",
+		"full": "yarn build & yarn gem:build & yarn test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chiefpansancolt/<PROJECT-NAME>"
+	},
+	"keywords": [],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/chiefpansancolt/<PROJECT-NAME>/issues"
+	},
+	"author": {
+		"name": "Christopher Pezza",
+		"email": "github@chiefpansancolt.live"
+	},
+	"contributors": [
+		{
+			"name": "Christopher Pezza",
+			"email": "github@chiefpansancolt.live",
+			"url": "https://chiefpansancolt.dev"
+		}
+	],
+	"homepage": "https://<PROJECT-NAME>.chiefpansancolt.dev/",
+	"babel": {},
+	"devDependencies": {
+		"@babel/core": "^7.21.3",
+		"@babel/eslint-parser": "^7.21.3",
+		"@hotwired/stimulus": "^3.2.1",
+		"@prettier/plugin-ruby": "^3.2.2",
+		"@tailwindcss/forms": "^0.5.3",
+		"@tailwindcss/typography": "^0.5.9",
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
+		"esbuild": "^0.17.14",
+		"eslint": "^8.36.0",
+		"markdownlint": "^0.28.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.8.7",
+		"prettier-plugin-erb": "^0.4.0",
+		"prettier-plugin-tailwindcss": "^0.2.5",
+		"tailwindcss": "^3.2.7"
+	}
+}
