@@ -41,3 +41,30 @@ For projects built using [Ruby on Rails](https://rubyonrails.org/)
 ## Salesforce Projects
 
 For projects built using [Salesforce](https://developer.salesforce.com/) mainly [SFDX](https://developer.salesforce.com/tools/sfdxcli)
+
+- ESLint
+- Prettier
+- SFDX
+- Jest
+- Project
+- Vscode
+- PMD
+- Github Workflows
+  - PMD
+  - Lint
+  - Test
+- package.json examples
+- .gitignore
+- .forceignore
+
+## Base Repo Files
+
+Base files for a repo no matter the project
+
+- Issue Templates
+- Pull Request Template
+- Code of Conduct
+- Contributing
+- Funding/Sponsor
+- Licenses
+- Change Log
