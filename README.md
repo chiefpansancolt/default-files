@@ -22,6 +22,21 @@ For projects built using [Next.js](https://nextjs.org/)
 
 For projects built using [Ruby on Rails](https://rubyonrails.org/)
 
+- ESLint
+- Prettier
+- Tailwindcss
+- Gemfiles
+- Gemspecs
+- Linters
+  - Rubocop
+  - Markdownlint
+  - ERB Lint
+- Github Workflows
+  - Build
+  - Lint
+- package.json examples
+- .gitignore
+- .ruby-version
 
 ## Salesforce Projects
 
