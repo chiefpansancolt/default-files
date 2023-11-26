@@ -68,3 +68,4 @@ Base files for a repo no matter the project
 - Funding/Sponsor
 - Licenses
 - Change Log
+- Codeowners
