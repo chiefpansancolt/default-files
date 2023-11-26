@@ -1,11 +1,19 @@
+import withMarkdoc from "@markdoc/next.js";
+import withSearch from "./src/markdoc/search.mjs";
+
 /** @type {import('next').NextConfig} */
-module.exports = {
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  images: {
-    loader: 'akamai',
-    path: '/',
-  },
+const nextConfig = {
+  pageExtensions: ["js", "jsx", "md", "ts", "tsx"],
+};
+
+export default withSearch(
+  withMarkdoc({ schemaPath: "./src/markdoc" })(nextConfig)
+);
+
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  pageExtensions: ["js", "jsx", "md", "ts", "tsx"],
 }
+
+export default nextConfig
